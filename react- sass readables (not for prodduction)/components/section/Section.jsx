@@ -7,18 +7,38 @@ export default (props) => {
         saved_form, page_change } = props
     ///resend query when change page
     const to_page = (to_page) => {
+        document.getElementById('recommendation').scrollIntoView();
         prod_list_change(undefined)
-        if ( saved_form != undefined ) query_filter((result,pages_n) => {
+        if (saved_form != undefined) query_filter((result, pages_n) => {
             total_page_change(pages_n)
             page_change(to_page)
             prod_list_change(result)
         }, to_page, saved_form)
 
-        else query_only((result,pages_n) => {
+        else query_only((result, pages_n) => {
             total_page_change(pages_n)
             page_change(to_page)
             prod_list_change(result)
         }, to_page, query)
+    }
+
+    const Recommend_msg = () => {
+        let msg =""
+        if(query!="") msg+= 'Results for "'+query+'"'
+        if(saved_form !=undefined){
+            const filter_for = saved_form.get('filter_for')
+            const brand = saved_form.get('brand')
+            const minimum_price = saved_form.get('minimum_price')
+            const maximum_price = saved_form.get('maximum_price')
+
+            msg+= "  ("+filter_for+")"
+            if(brand != "All") msg+= "  ("+brand+"brand phones)"
+            if(minimum_price!="" || maximum_price!="") msg+= 
+                "  (Price rage:"+minimum_price+" to "+maximum_price+")"
+        }
+
+        if(msg=="")msg="Highest Rated"
+    return(<h1 id="results_title">{msg}</h1>)
     }
 
     const prev_page_tag = () => {
@@ -42,6 +62,8 @@ export default (props) => {
             <div className="blank_interval"></div>
             <div id="recommendation" className="container">
                 <div className="blank_interval"></div>
+                {Recommend_msg()}
+
 
                 {props.children}
 

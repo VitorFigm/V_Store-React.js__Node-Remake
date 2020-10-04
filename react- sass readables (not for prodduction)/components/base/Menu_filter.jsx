@@ -28,6 +28,8 @@ export default (props) => {
                 state_f.initial('menu_filter_screen')
                 state_f.initial('menu_filter')
 
+                document.getElementById('recommendation').scrollIntoView();
+                
                 prod_list_change(undefined)
                 const my_form = new FormData(this)
                 saved_form_change(my_form)

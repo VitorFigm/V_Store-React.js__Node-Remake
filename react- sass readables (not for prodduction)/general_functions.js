@@ -20,7 +20,6 @@ export function request_brand_list(callback) {
 }
 
 export function home_request(callback, page) {
-    document.getElementById('recommendation').scrollIntoView();
     ////form
     const form = new FormData()
     form.append('page', page)
@@ -39,7 +38,6 @@ export function home_request(callback, page) {
 
 ///HTTP request
 export function query_only(callback, page, query) {
-    document.getElementById('recommendation').scrollIntoView();
     ////form
     const form = new FormData()
     form.append('page', page)
@@ -57,7 +55,6 @@ export function query_only(callback, page, query) {
 }
 
 export function query_filter(callback, page, filter_form) {
-    document.getElementById('recommendation').scrollIntoView();
     ///from
     filter_form.append('page', page)
     //requqest

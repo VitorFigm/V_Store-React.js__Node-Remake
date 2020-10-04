@@ -6,6 +6,7 @@ export default (props) => {
     const { prod_list_change, saved_form_change,
         query_change, page_change, total_page_change } = props
     const query = () => {
+        document.getElementById('recommendation').scrollIntoView();
         saved_form_change(undefined)
         const value = document.getElementById('search_input').value;
 

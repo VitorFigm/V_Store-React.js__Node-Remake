@@ -1,5 +1,5 @@
 # V_Store
-Front-end and back-end of an Store.This project is a remake made in Node.js of [my old project](https://github.com/VitorFigm/V_Store)
+Front-end and back-end of an Store.This project is a remake made in React JS and Node.js of [my old project](https://github.com/VitorFigm/V_Store)
 ## [Visit the web app](http://v-store--node.herokuapp.com/)
 ##### Being a free server, connecting can take some time
 <br>

@@ -1,6 +1,6 @@
 # V_Store
 Front-end and back-end of an Store.This project is a remake made in React JS and Node.js of [my old project](https://github.com/VitorFigm/V_Store)
-## [Visit the web app](http://v-store--node.herokuapp.com/)
+## [Visit the web app](https://the-v-store-react-node.herokuapp.com/)
 ##### Being a free server, connecting can take some time
 <br>
 <br>
@@ -33,5 +33,5 @@ No template was used to design this store
 All of the 594 products were taken from Amazon's database
 
 
-## [Visit the web app](http://v-store--node.herokuapp.com/)
+## [Visit the web app](https://the-v-store-react-node.herokuapp.com/)
 ##### Being a free server, connecting can take some time

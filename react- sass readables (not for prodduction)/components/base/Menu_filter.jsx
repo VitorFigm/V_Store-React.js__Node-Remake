@@ -8,7 +8,7 @@ export default (props) => {
         brand_list_change, saved_form_change,
         prod_list_change, page_change, total_page_change } = props
 
-    let brand_options = brand_list.length != 0 ? brand_list.map((v, i, arr) => (
+    let brand_options = brand_list.length !== 0 ? brand_list.map((v, i, arr) => (
         <option value={v} key={i}>{v}</option>
     )
     ) : <option disabled >loading...</option>
@@ -21,7 +21,7 @@ export default (props) => {
             const l_price = this.elements['minimum_price'].value
             if (l_price > h_price) {
                 document.getElementById('error_msg').innerHTML = "Price min needs to be lower than Price max"
-                document.getElementById('error_msg_box').style.display = 'flex'
+                state_f.final('error_msg_box')
             } else {
                 page_change(1)
                 ///close form
@@ -99,11 +99,11 @@ export default (props) => {
                 <input type="submit" defaultValue="Filter" id="submit_btn" />
 
 
-                <div id="error_msg_box">
+                <div id="error_msg_box" className="initial_state">
                     <div id="error_msg"></div>
                     <button type="button" className="filter_close_btn"
                         onClick={() => {
-                            document.getElementById('error_msg_box').style.display = 'none'
+                            state_f.initial('error_msg_box')
                         }}
                     />
                 </div>

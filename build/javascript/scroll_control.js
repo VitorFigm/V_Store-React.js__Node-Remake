@@ -5,7 +5,7 @@ window.scroll_position_before = this.scrollY
 window.onscroll = (e) => {  
     const scroll = document.getElementById('scroll')
     //check if the scroll is at the end of the page, if it's, scroll image disappears
-    scroll.style.opacity = this.scrollY !=0? '0':'1'
+    scroll.style.opacity = this.scrollY !==0? '0':'1'
       
     ///functions
     const initial = window.innerWidth >=700?

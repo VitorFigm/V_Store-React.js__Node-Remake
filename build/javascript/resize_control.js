@@ -2,7 +2,7 @@ window.higher_res = window.innerWidth > 700
 
 window.onresize = ()=>{
 
-    const changed_res = this.innerWidth > 700 != window.higher_res 
+    const changed_res = this.innerWidth > 700 !== window.higher_res 
     
     if(changed_res){
         initial_state('search');

@@ -7,7 +7,7 @@ export default (props) => {
     let [loading,loading_change] = useState()
     ///loading
     useEffect(()=>{
-        if(prod_list!=undefined)
+        if(prod_list!==undefined)
             loading_change(undefined)
             else
                 loading_change(<div id="loading_prods">
@@ -21,7 +21,7 @@ export default (props) => {
     })
 
     
-    const prod_info = prod_list!=undefined? 
+    const prod_info = prod_list!==undefined? 
     prod_list.map((prod, i) => (
         <>
             <a className="product" href={prod.url} target="_blank" rel="noopener noreferrer">
